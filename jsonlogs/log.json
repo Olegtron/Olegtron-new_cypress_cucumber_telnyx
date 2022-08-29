@@ -4,222 +4,6 @@
     "elements": [
       {
         "description": "",
-        "id": "social-links-correct-redirection-check;social-links-correct-redirection-check",
-        "keyword": "Scenario",
-        "line": 2,
-        "name": "social links correct redirection check",
-        "steps": [
-          {
-            "keyword": "Given ",
-            "line": 3,
-            "name": "I Visit telnyx.com Website Main PagE",
-            "result": {
-              "duration": 1932000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "When ",
-            "line": 4,
-            "name": "When This site uses Cookies Window appears I Close It",
-            "result": {
-              "duration": 156000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 5,
-            "name": "In site footer i click on each social link and each social link should redirect to relevant social network",
-            "result": {
-              "duration": 8040000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "social-links-correct-redirection-check",
-    "keyword": "Feature",
-    "line": 1,
-    "name": "social links correct redirection check",
-    "uri": "cypress\\e2e\\social_links_correct_redirection.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
-        "id": "support-center-not-valid-search;support-center-not-valid-search",
-        "keyword": "Scenario",
-        "line": 2,
-        "name": "support center not valid search",
-        "steps": [
-          {
-            "keyword": "Given ",
-            "line": 3,
-            "name": "^I Visit telnyx.com Website Main Page^",
-            "result": {
-              "duration": 1388000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "When ",
-            "line": 4,
-            "name": "^When This site uses Cookies Window appears I ClosE It",
-            "result": {
-              "duration": 233000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 5,
-            "name": "I click on Support Center button^",
-            "result": {
-              "duration": 3153000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I enter not valid text into search field",
-            "result": {
-              "duration": 1238000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "And ",
-            "line": 8,
-            "name": "I receive search error text notification",
-            "result": {
-              "duration": 30000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "support-center-not-valid-search",
-    "keyword": "Feature",
-    "line": 1,
-    "name": "support center not valid search",
-    "uri": "cypress\\e2e\\support_center_notvalid_search.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
-        "id": "support-center-valid-search;support-center-valid-search",
-        "keyword": "Scenario",
-        "line": 2,
-        "name": "support center valid search",
-        "steps": [
-          {
-            "keyword": "Given ",
-            "line": 3,
-            "name": "I Visit telnyx.com Website Main Page^",
-            "result": {
-              "duration": 1601000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "When ",
-            "line": 4,
-            "name": "When This site uses Cookies Window appears I ClosE It",
-            "result": {
-              "duration": 161000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 5,
-            "name": "I click on Support Center button",
-            "result": {
-              "duration": 2705000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I enter valid text into search field",
-            "result": {
-              "duration": 1234000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "And ",
-            "line": 8,
-            "name": "I receive in search results articles that includes searched text",
-            "result": {
-              "duration": 46000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "support-center-valid-search",
-    "keyword": "Feature",
-    "line": 1,
-    "name": "support center valid search",
-    "uri": "cypress\\e2e\\support_center_valid_search.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
         "id": "switch-and-save-with-telnyx-sliders-functionality-check-for-sms-tab;switch-and-save-with-telnyx-sliders-functionality-check-for-sms-tab",
         "keyword": "Scenario",
         "line": 2,
@@ -230,7 +14,7 @@
             "line": 3,
             "name": "I visit telnyx.com website main page$^",
             "result": {
-              "duration": 1521000000,
+              "duration": 2134000000,
               "status": "passed"
             },
             "match": {
@@ -242,7 +26,7 @@
             "line": 4,
             "name": "When This site uses cookies window appears i close IT",
             "result": {
-              "duration": 244000000,
+              "duration": 183000000,
               "status": "passed"
             },
             "match": {
@@ -254,7 +38,7 @@
             "line": 5,
             "name": "^I scroll page to switch+save with Telnyx block",
             "result": {
-              "duration": 2051000000,
+              "duration": 2037000000,
               "status": "passed"
             },
             "match": {
@@ -266,7 +50,7 @@
             "line": 6,
             "name": "I click on SMS button",
             "result": {
-              "duration": 605000000,
+              "duration": 600000000,
               "status": "passed"
             },
             "match": {
@@ -278,7 +62,7 @@
             "line": 7,
             "name": "^I see default settings preset for this block",
             "result": {
-              "duration": 1386000000,
+              "duration": 1488000000,
               "status": "passed"
             },
             "match": {
@@ -290,7 +74,7 @@
             "line": 9,
             "name": "I move Send messages and Receive messages sliders",
             "result": {
-              "duration": 452000000,
+              "duration": 450000000,
               "status": "passed"
             },
             "match": {
@@ -317,7 +101,223 @@
     "keyword": "Feature",
     "line": 1,
     "name": "switch and save with Telnyx sliders functionality check for sms tab",
-    "uri": "cypress\\e2e\\switch_save _with_Telnyx_sms_sliders.feature"
+    "uri": "cypress\\e2e\\sms.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "social-links-correct-redirection-check;social-links-correct-redirection-check",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "social links correct redirection check",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I Visit telnyx.com Website Main PagE",
+            "result": {
+              "duration": 1694000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 4,
+            "name": "When This site uses Cookies Window appears I Close It",
+            "result": {
+              "duration": 163000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 5,
+            "name": "In site footer i click on each social link and each social link should redirect to relevant social network",
+            "result": {
+              "duration": 8610000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "social-links-correct-redirection-check",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "social links correct redirection check",
+    "uri": "cypress\\e2e\\social.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "support-center-not-valid-search;support-center-not-valid-search",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "support center not valid search",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 3,
+            "name": "^I Visit telnyx.com Website Main Page^",
+            "result": {
+              "duration": 2041000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 4,
+            "name": "^When This site uses Cookies Window appears I ClosE It",
+            "result": {
+              "duration": 152000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I click on Support Center button^",
+            "result": {
+              "duration": 3280000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I enter not valid text into search field",
+            "result": {
+              "duration": 1217000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 8,
+            "name": "I receive search error text notification",
+            "result": {
+              "duration": 40000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "support-center-not-valid-search",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "support center not valid search",
+    "uri": "cypress\\e2e\\suppnovalid.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "support-center-valid-search;support-center-valid-search",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "support center valid search",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I Visit telnyx.com Website Main Page^",
+            "result": {
+              "duration": 1702000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 4,
+            "name": "When This site uses Cookies Window appears I ClosE It",
+            "result": {
+              "duration": 163000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I click on Support Center button",
+            "result": {
+              "duration": 2659000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I enter valid text into search field",
+            "result": {
+              "duration": 1169000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 8,
+            "name": "I receive in search results articles that includes searched text",
+            "result": {
+              "duration": 42000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "support-center-valid-search",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "support center valid search",
+    "uri": "cypress\\e2e\\suppvalid.feature"
   },
   {
     "description": "",
@@ -334,7 +334,7 @@
             "line": 3,
             "name": "^$I visit telnyx.com website main page",
             "result": {
-              "duration": 1582000000,
+              "duration": 1663000000,
               "status": "passed"
             },
             "match": {
@@ -346,7 +346,7 @@
             "line": 4,
             "name": "When This site uses cookies window appears i close it^",
             "result": {
-              "duration": 159000000,
+              "duration": 158000000,
               "status": "passed"
             },
             "match": {
@@ -358,7 +358,7 @@
             "line": 5,
             "name": "I scroll page to switch+save with Telnyx block",
             "result": {
-              "duration": 2032000000,
+              "duration": 2031000000,
               "status": "passed"
             },
             "match": {
@@ -370,7 +370,7 @@
             "line": 6,
             "name": "I see default settings preset for this block",
             "result": {
-              "duration": 1774000000,
+              "duration": 1664000000,
               "status": "passed"
             },
             "match": {
@@ -382,7 +382,7 @@
             "line": 8,
             "name": "I move Make outbound calls and Receive inbound calls sliders",
             "result": {
-              "duration": 465000000,
+              "duration": 446000000,
               "status": "passed"
             },
             "match": {
@@ -394,7 +394,7 @@
             "line": 9,
             "name": "I see that price in Compare Costs section is changed",
             "result": {
-              "duration": 67000000,
+              "duration": 71000000,
               "status": "passed"
             },
             "match": {
@@ -409,6 +409,6 @@
     "keyword": "Feature",
     "line": 1,
     "name": "switch and save with Telnyx sliders functionality check for voice tab",
-    "uri": "cypress\\e2e\\switch_save _with_Telnyx_voice_sliders.feature"
+    "uri": "cypress\\e2e\\voice.feature"
   }
 ]
