@@ -33,7 +33,9 @@ npm install --save-dev cypress-cucumber-preprocessor
 - Open the project folder in VSCode or another IDE
 
 Features located in: cypress/e2e/*.feature
+
 Page objects located in: cypress/pageobjects/*.js
+
 Step definitions located in: cypress/support/step_definitions/*cy.js
 
 **Project Run**
