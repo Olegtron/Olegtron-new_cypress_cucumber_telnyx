@@ -18,7 +18,6 @@ module.exports = defineConfig({
 
   e2e: {
     retries: 5,
-    "retries": 5,
     specPattern: "**/*.feature",
     supportFile: false,
     setupNodeEvents,
