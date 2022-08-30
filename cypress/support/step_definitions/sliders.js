@@ -5,7 +5,7 @@ import commonPage from "../../pageobjects/commonPage"
 
 //Scenario: sliders and price check for voice tab
 Given("^$I visit telnyx.com website main page", () => {
-    commonPage.openUrl()
+    cy.visit('/')
 });
 When("When This site uses cookies window appears i close it^", () => {
     commonPage.cookieCloseButton()

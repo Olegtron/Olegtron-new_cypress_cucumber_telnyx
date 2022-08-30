@@ -6,7 +6,7 @@ import commonPage from "../../pageobjects/commonPage"
 
 //Scenario: talk to an expert using valid credentials
 Given("I visit telnyx.com website main page", () => {
-  commonPage.openUrl()
+  cy.visit('/')
 });
 When("When This site uses cookies window appears i close it", () => {
   commonPage.cookieCloseButton()

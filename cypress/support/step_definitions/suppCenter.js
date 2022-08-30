@@ -6,7 +6,8 @@ import commonPage from "../../pageobjects/commonPage"
 
 //Scenario: support center valid search
 Given("I Visit telnyx.com Website Main Page^", () => {
-  commonPage.openUrl()
+  cy.visit('/')
+  //commonPage.openUrl()
 });
 When("When This site uses Cookies Window appears I ClosE It", () => {
   commonPage.cookieCloseButton()

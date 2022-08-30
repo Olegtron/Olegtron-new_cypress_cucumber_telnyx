@@ -17,6 +17,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
 
   e2e: {
+    baseUrl: 'https://telnyx.com/',
     retries: 5,
     specPattern: "**/*.feature",
     supportFile: false,

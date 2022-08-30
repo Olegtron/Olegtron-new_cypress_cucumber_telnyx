@@ -5,7 +5,7 @@ import signUpPage from '../../pageobjects/signUpPage'
 import commonPage from "../../pageobjects/commonPage"
 
 Given("I visit telnyx.com Website main pagE", () => {
-  commonPage.openUrl()
+  cy.visit('/')
 });
 When("When This site uses Cookies window appears i close It", () => {
   commonPage.cookieCloseButton()

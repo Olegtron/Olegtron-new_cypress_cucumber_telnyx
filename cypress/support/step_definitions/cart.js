@@ -9,7 +9,7 @@ import commonPage from "../../pageobjects/commonPage"
 
 //Scenario: adding product to cart
 Given("I Visit telnyx.com Website Main page$$", () => {
-  commonPage.openUrl()
+  cy.visit('/')
 });
 When("When This site uses Cookies Window appears I close it$$", () => {
   commonPage.cookieCloseButton()

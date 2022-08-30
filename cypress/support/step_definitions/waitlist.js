@@ -7,7 +7,7 @@ import commonPage from "../../pageobjects/commonPage"
 
 //Scenario: join the whitelist with valid credentials
 Given("^I visit telnyx.com website main page", () => {
-  commonPage.openUrl()
+  cy.visit('/')
 });
 When("^When this site uses cookies window appears i close it", () => {
   commonPage.cookieCloseButton()

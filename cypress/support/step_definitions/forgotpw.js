@@ -6,7 +6,7 @@ import passwordResetPage from '../../pageobjects/passwordResetPage'
 import commonPage from "../../pageobjects/commonPage"
 
 Given("I Visit telnyx.com Website main page", () => {
-  commonPage.openUrl()
+  cy.visit('/')
 });
 When("When This site uses Cookies Window appears i close it", () => {
   commonPage.cookieCloseButton()
