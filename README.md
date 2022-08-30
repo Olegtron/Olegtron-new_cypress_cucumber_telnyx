@@ -33,7 +33,7 @@ Features located in: cypress/e2e/*.feature
 
 Page objects located in: cypress/pageobjects/*.js
 
-Step definitions located in: cypress/support/step_definitions/*cy.js
+Step definitions located in: cypress/support/step_definitions/*.js
 
 **Project Run**
 - Type in terminal following commands:
