@@ -31,7 +31,7 @@ And("I redirected to new page and see confirmation text", () => {
 
 //Scenario: join the whitelist with invalid email
 Then("I visit telnyx.com website main page^", () => {
-  commonPage.openUrl()
+  cy.visit('/')
 });
 And("I click on Join the waitlist link^", () => {
   mainPage.waitListLink()

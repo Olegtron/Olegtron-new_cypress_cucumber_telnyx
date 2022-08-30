@@ -30,7 +30,7 @@ And("Check that ticket was succesfully submited", () => {
 
 //Scenario: talk to an expert using invalid email and company website
 Then("I go to telnyx.com website main page$", () => {
-  commonPage.openUrl()
+  cy.visit('/')
 });
 And("^I click on Talk to an expert button", () => {
   mainPage.talkExpertButton()
