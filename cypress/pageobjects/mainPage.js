@@ -1,6 +1,8 @@
 import commonPage from "./commonPage"
 
 const random = Math.random().toString(36).substring(4,14)
+const randomEmail = random+"@gmail.com"
+
 const talkToExpert = 'li:nth-child(1) > div > a'
 const sms = 'div>div>div>div>div>div>div>button:nth-child(2)'
 const tryForFree = '[type="submit"]'
@@ -123,7 +125,7 @@ class mainPage
 
     //Input
     tryForFreeEmail() {
-        commonPage.getElement(tryForFreeEmailInput).type(random+"@gmail.com")
+        commonPage.getElement(tryForFreeEmailInput).type(randomEmail)
     }
 }
 

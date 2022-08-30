@@ -17,6 +17,8 @@ module.exports = defineConfig({
   viewportHeight: 1080,
 
   e2e: {
+    retries: 5,
+    "retries": 5,
     specPattern: "**/*.feature",
     supportFile: false,
     setupNodeEvents,

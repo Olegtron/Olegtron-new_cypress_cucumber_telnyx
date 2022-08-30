@@ -1,5 +1,4 @@
 import {  Given, When, Then, And } from "@badeball/cypress-cucumber-preprocessor";
-const random = Math.random().toString(36).substring(4,14)
 
 import mainPage from '../../pageobjects/mainPage'
 import logInPage from '../../pageobjects/logInPage'

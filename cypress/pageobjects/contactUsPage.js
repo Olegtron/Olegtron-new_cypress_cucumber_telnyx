@@ -12,6 +12,10 @@ const website = '#Website'
 const confirm = 'main>div>h1'
 const inputError = '[class="mktoError"]'
 
+const randomEmail = random+"@gmail.com"
+const phoneNumber = "3124444444"
+const websiteUrl = "http://"+random+"@gmail.com"
+
 class contactUsPage
 {
     //Buttons
@@ -30,7 +34,7 @@ class contactUsPage
         commonPage.getElement(lastName).type(random).type('{enter}')
     }
     businessEmail() {
-        commonPage.getElement(email).type(random+'@gmail.com')
+        commonPage.getElement(email).type(randomEmail)
     }
     businessEmailNotValid() {
         commonPage.getElement(email).type(random)
@@ -39,10 +43,10 @@ class contactUsPage
         commonPage.getElement(country).select('+1').type('{enter}')
     }
     phoneNumber(){
-        commonPage.getElement(number).type('3124444444')
+        commonPage.getElement(number).type(phoneNumber)
     }
     companyWebsite() {
-        commonPage.getElement(website).type("http://"+random+"@gmail.com")
+        commonPage.getElement(website).type(websiteUrl)
     }
     companyWebsiteNotValid() {
         commonPage.getElement(website).type(random)

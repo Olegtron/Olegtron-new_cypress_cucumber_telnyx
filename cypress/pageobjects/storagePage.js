@@ -1,6 +1,8 @@
 import commonPage from "./commonPage"
 
 const random = Math.random().toString(36).substring(4,14)
+const randomEmail = random+"@gmail.com"
+
 const firstName = '#FirstName'
 const lastName = '#LastName'
 const email = '#Email'
@@ -19,7 +21,7 @@ class storagePage
         commonPage.getElement(email).type(random)
     }
     emailFieldValid() {
-        commonPage.getElement(email).type(random+"@gmail.com")
+        commonPage.getElement(email).type(randomEmail)
     }
 
     //Notifications
