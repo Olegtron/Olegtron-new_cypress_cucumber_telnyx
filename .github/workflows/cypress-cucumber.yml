@@ -1,4 +1,4 @@
-name: Cypress-Cucumber Tests
+name: Cypress-Cucumber
 on:
     push:
         branches: [master]
@@ -19,19 +19,27 @@ jobs:
               run: npm i npm@latest
             - name: install all dependencies
               run: npm i
+            - name: Install Cypress
+              run: npm install cypress
+            - name: Install @badeball/cypress-cucumber-preprocessor
+              run: npm install @badeball/cypress-cucumber-preprocessor
+            - name: Install cypress-browserify-preprocessor
+              run: npm install --save-dev @cypress/browserify-preprocessor
+            - name: Install reporter dev
+              run: npm install --save-dev multiple-cucumber-html-reporter
             - name: run test
               run: npm run cypress:run
             - name: Generate reports
               if: always()
               run: npm run cypress:report
-            - name: Upload artifact cucumber-report
+            - name: Upload artifacts
               uses: actions/upload-artifact@v3
               if: always()
               with:
                   name: cucumber-report
                   path: ./reports/cucumber-htmlreport
                   retention-days: 5 
-            - name: Deploy to pages
+            - name: Deploy to gh-pages
               if: always()
               uses: peaceiris/actions-gh-pages@v3.7.3
               with:
