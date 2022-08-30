@@ -5,7 +5,7 @@ Tutorial project for learning Cypress with Cucumber
 - Download and install Node.js (https://nodejs.org/en/download/) at least v.14.x
 ### Installing
 - Download or clone my git repository
-- Install all depencies
+- Install all depencies if you don't installed them before
 
 ```
 npm install --save-dev cypress
@@ -26,11 +26,8 @@ npm install --save-dev multiple-cucumber-html-reporter
 npm install --save-dev cypress-cucumber-preprocessor  
 ```
 
-
-
-
 **Project opening**
-- Open the project folder in VSCode or another IDE
+- Open project folder in VSCode or another IDE
 
 Features located in: cypress/e2e/*.feature
 
@@ -39,15 +36,15 @@ Page objects located in: cypress/pageobjects/*.js
 Step definitions located in: cypress/support/step_definitions/*cy.js
 
 **Project Run**
-- Launch Cypress with the following commands in the terminal:
+- Type in terminal following commands:
 ```
-npx cypress open
+npm run cypress:open
 ```
 OR
 ```
-npx cypress run 
+npm run cypress:run  
 ```
-- To generate html report use:
+- To generate html report type in terminal:
 ```
 npm run cypress:report
 ```
