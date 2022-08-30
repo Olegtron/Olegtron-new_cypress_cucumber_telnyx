@@ -1,16 +1,23 @@
+import commonPage from "./commonPage"
+
+const searchToggle = '[role="switch"]'
+const searchNumbers = 'react-buy-numbers>div>div:nth-child(2)>section>form>div>div>button'
+const addProduct = 'react-buy-numbers>div>div:nth-child(2)>section:nth-child(2)>table>tbody>tr:nth-child(1)>td:nth-child(8)>button'
+const cart = 'react-title-bar>div>div>div>div>div>button'
+
 class searchNumbersPage
 {
     exampleSearchesToggle(){
-        cy.get('div.BuyNumbers__RightActionsContainer-hbrWqZ.bPPPxc > div > button').click()
+        commonPage.clickElement(searchToggle)
     }
     searchNumbersButton(){
-        cy.get('div.SearchFilterForm__SubmitContainer-dHQiFa.ePanDY > button').click()
+        commonPage.clickElement(searchNumbers)
     }
     addProductButton(){
-        cy.get('tr:nth-child(1) > td:nth-child(8) > button').click()
+        commonPage.clickElement(addProduct)
     }
     cartButton(){
-        cy.get('.Button_withBadge-tx-Z1XU7xF > div > .Button_button-tx-22oxFy').click()
+        commonPage.clickElement(cart)
     }
 }
 

@@ -1,7 +1,11 @@
+import commonPage from "./commonPage"
+
+const cart = 'react-title-bar>div>div>div>button'
+
 class homePage
 {
     cartButton(){
-        return cy.get('div.tx-Z12IMoF > button').click()
+        commonPage.clickElement(cart)
     }
 }
 

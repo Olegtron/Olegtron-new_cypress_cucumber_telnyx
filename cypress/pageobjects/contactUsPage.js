@@ -1,50 +1,62 @@
+import commonPage from "./commonPage"
+
 const random = Math.random().toString(36).substring(4,14)
+const submit = '[type="submit"]'
+const reason = '#Reason_for_Contact__c'
+const firstName = '#FirstName'
+const lastName = '#LastName'
+const email = '#Email'
+const country = '#Phone_Number_Extension__c'
+const number = '#Phone_Number_Base__c'
+const website = '#Website'
+const confirm = 'main>div>h1'
+const inputError = '[class="mktoError"]'
 
 class contactUsPage
 {
     //Buttons
     submitButton(){
-        return cy.get('.mktoButtonRow > span > button').click()
+        commonPage.clickElement(submit)
     }
 
     //Input
     reasonDropDown(){
-        return cy.get('#Reason_for_Contact__c').select('Support').type('{enter}')
+        commonPage.getElement(reason).select('Support').type('{enter}')
     }
     firstName() {
-        return cy.get('#FirstName').type(random).type('{enter}')
+        commonPage.getElement(firstName).type(random).type('{enter}')
     }
     lastName() {
-        return cy.get('#LastName').type(random).type('{enter}')
+        commonPage.getElement(lastName).type(random).type('{enter}')
     }
     businessEmail() {
-        return cy.get('#Email').type(random+'@gmail.com')
+        commonPage.getElement(email).type(random+'@gmail.com')
     }
     businessEmailNotValid() {
-        return cy.get('#Email').type(random)
+        commonPage.getElement(email).type(random)
     }
     countryDropDown(){
-        return cy.get('#Phone_Number_Extension__c').select('+1').type('{enter}')
+        commonPage.getElement(country).select('+1').type('{enter}')
     }
     phoneNumber(){
-        return cy.get('#Phone_Number_Base__c').type('3124444444')
+        commonPage.getElement(number).type('3124444444')
     }
     companyWebsite() {
-        return cy.get('#Website').type("http://"+random+"@gmail.com")
+        commonPage.getElement(website).type("http://"+random+"@gmail.com")
     }
     companyWebsiteNotValid() {
-        return cy.get('#Website').type(random)
+        commonPage.getElement(website).type(random)
     }
-    //Notifications
 
+    //Notifications
     confirmationText() {
-        return cy.get('.gQAeUA > main > div > h1').should('be.visible').should('have.text', 'Thanks for Reaching Out!')
+        commonPage.getElement(confirm).should('be.visible').should('have.text', 'Thanks for Reaching Out!')
     }
     emailErrorText() {
-        return cy.get('.mktoRequiredField > div.mktoError').should('be.visible').should('have.text', 'Must be valid email. example@yourdomain.com')
+        commonPage.getElement(inputError).should('be.visible').should('have.text', 'Must be valid email. example@yourdomain.com')
     }
     websiteErrorText() {
-        return cy.get('.mktoRequiredField > div.mktoError').should('be.visible').should('have.text', 'Must be a url. http://www.example.com/')
+        commonPage.getElement(inputError).should('be.visible').should('have.text', 'Must be a url. http://www.example.com/')
     }
 }
 

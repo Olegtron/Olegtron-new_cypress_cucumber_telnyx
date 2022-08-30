@@ -1,103 +1,129 @@
+import commonPage from "./commonPage"
+
 const random = Math.random().toString(36).substring(4,14)
+const talkToExpert = 'li:nth-child(1) > div > a'
+const sms = 'div>div>div>div>div>div>div>button:nth-child(2)'
+const tryForFree = '[type="submit"]'
+const logIn = 'header>div>div>div>a:nth-child(4)'
+const createTrialAcc = 'div>[href="https://telnyx.com/sign-up"]'
+const supportCenter = 'header>div>div>div>a:nth-child(3)'
+
+const waitList = 'header>div>div>span>div>span>a'
+const requestDemo = 'div>div>div>div>div>div>div>p>a'
+const linkedinUrl = 'https://www.linkedin.com/'
+const linkedinLink = '[href="https://www.linkedin.com/company/telnyx/"]'
+const twitterUrl = 'https://twitter.com/'
+const twitterLink = '[href="https://twitter.com/telnyx"]'
+const facebookUrl = 'https://www.facebook.com/'
+const facebookLink = '[href="https://www.facebook.com/Telnyx/"]'
+
+const switchAndSaveBlock = 'div>h2>a>span'
+const makeUnbound = 'main>div>div>div>div>div>div>div>div>div>div:nth-child(4)>div:nth-child(3)'
+const receiveUnbound = 'main>div>div>div>div>div>div>div>div>div>div:nth-child(5)>div:nth-child(3)'
+const tellnyxCompare = 'div>span>span'
+const twilioCompare = 'div>div>div>div>div>div>div>div:nth-child(2) > span'
+const makeUnboundCallsSlider = ':nth-child(4) > div.telnyx-slider > div > div.ant-slider-handle'
+const receiveInboundCallsSlider = ':nth-child(5) > div.telnyx-slider > div > div.ant-slider-handle'
+const tryForFreeEmailInput = '[type="email"]'
 
 class mainPage
 {
     //Buttons
-    cookieCloseButton(){
-        cy.get('div.sc-62badcbb-0.gQAeUA > div > div > button').click()
-    }
     talkExpertButton(){
-        cy.get('li:nth-child(1) > div > a').click()
+        commonPage.clickElement(talkToExpert)
     }
     smsButton() {
-        cy.get('button.Button__StyledDefaultButton-vntg8h-0.hANPHj').click()
+        commonPage.clickElement(sms)
     }
     tryForFreeButton() {
-        cy.get('div.sc-876fcb71-1.fywsqS > div > div > button').click()
+        commonPage.clickElement(tryForFree)
     }
     logInButton() {
-        cy.get('div.sc-602eb426-0.cYbJmr > div > div > a:nth-child(4)').click()
+        commonPage.clickElement(logIn)
     }
     createTrialAccButton() {
-        cy.get('div.sc-1a5981e5-16.fauQOi > div.sc-5d3a275a-0.eKznVb > a').click()
+        commonPage.clickElement(createTrialAcc)
     }
     supportCenterButton() {
-        cy.get('div.sc-602eb426-0.cYbJmr > div > div > a:nth-child(3)').click()
+        commonPage.clickElement(supportCenter)
     }
 
     //Links
     waitListLink() {
-        cy.get('div.sc-602eb426-0.cYbJmr > div > span > div > span > a').click()
+        commonPage.clickElement(waitList)
     }
     requestDemoLink() {
-        cy.get('div.sc-5d3a275a-29.hQDMMf > div > p > a').click()
+        commonPage.clickElement(requestDemo)
     }
     linkedInLink() {
-        cy.get('div.sc-7b6c9f9b-3.iznSjj > div > div:nth-child(6) > div > ul > li:nth-child(1) > a').scrollIntoView().invoke('removeAttr', 'target').click().url().should('contain', 'https://www.linkedin.com/').go('back')
+        cy.get(linkedinLink).scrollIntoView().invoke('removeAttr', 'target').click().url().should('contain', linkedinUrl).go('back')
     }
     twitterLink() {
-        cy.get('div.sc-7b6c9f9b-3.iznSjj > div > div:nth-child(6) > div > ul > li:nth-child(2) > a').invoke('removeAttr', 'target').click().url().should('contain', 'https://twitter.com/').go('back')
+        cy.get(twitterLink).invoke('removeAttr', 'target').click().url().should('contain', twitterUrl).go('back')
     }
     facebookLink() {
-        cy.get('div.sc-7b6c9f9b-3.iznSjj > div > div:nth-child(6) > div > ul > li:nth-child(3) > a').invoke('removeAttr', 'target').click().url().should('contain', 'https://www.facebook.com/')
+        cy.get(facebookLink).invoke('removeAttr', 'target').click().url().should('contain', facebookUrl).go('back')
     }
 
     //Page Elements
+    smsButtonView() {
+        commonPage.getElement(sms).scrollIntoView()
+    }
     switchAndSaveBlock() {
-        return cy.get('.sc-1e626587-1.fjgfOb > h2 > a > span').scrollIntoView()
+        commonPage.getElement(switchAndSaveBlock).scrollIntoView()
     }
     makeUnboundCalls() {
-        return cy.get(':nth-child(4) > div.sc-1a5981e5-4.liMKkt').should('be.visible').should('have.text', '240,000 minutes per month using 480 local numbers.')
+        commonPage.getElement(makeUnbound).should('be.visible').should('have.text', '240,000 minutes per month using 480 local numbers.')
     }
     receiveInboundCalls() {
-        return cy.get(':nth-child(5) > div.sc-1a5981e5-4.liMKkt').should('be.visible').should('have.text', '110,000 minutes per month using 220 local numbers.')
+        commonPage.getElement(receiveUnbound).should('be.visible').should('have.text', '110,000 minutes per month using 220 local numbers.')
     }
     tellnyxCompareCostBasic() {
-        return cy.get('.bAmCql > span > span').should('be.visible').should('have.text', '$2,578')
+        commonPage.getElement(tellnyxCompare).should('be.visible').should('have.text', '$2,578')
     }
     twilioCompareCostBasic() {
-        return cy.get('.fgvOeg > div:nth-child(2) > span').should('be.visible').should('have.text', '$4,502')
+        commonPage.getElement(twilioCompare).should('be.visible').should('have.text', '$4,502')
     }
     tellnyxCompareCost() {
-        return cy.get('.bAmCql > span > span').should('be.visible').should('not.have.text', '$2,578')
+        commonPage.getElement(tellnyxCompare).should('be.visible').should('not.have.text', '$2,578')
     }
     twilioCompareCost() {
-        return cy.get('.fgvOeg > div:nth-child(2) > span').should('be.visible').should('not.have.text', '$4,502')
+        commonPage.getElement(twilioCompare).should('be.visible').should('not.have.text', '$4,502')
     }
     makeUnboundCallsSlider() {
-        return cy.get(':nth-child(4) > div.telnyx-slider > div > div.ant-slider-handle').click({ multiple: true, force: true }).type("{rightarrow}{rightarrow}")
+        commonPage.sliderDrag(makeUnboundCallsSlider)
     }
     receiveInboundCallsSlider() {
-        return cy.get(':nth-child(5) > div.telnyx-slider > div > div.ant-slider-handle').click({ multiple: true, force: true }).type("{rightarrow}{rightarrow}")
+        commonPage.sliderDrag(receiveInboundCallsSlider)
     }
     sendMessages() {
-        return cy.get(':nth-child(4) > div.sc-1a5981e5-4.liMKkt').should('be.visible').should('have.text', '285,000 SMS per month.')
+        commonPage.getElement(makeUnbound).should('be.visible').should('have.text', '285,000 SMS per month.')
     }
     receiveMessages() {
-        return cy.get(':nth-child(5) > div.sc-1a5981e5-4.liMKkt').should('be.visible').should('have.text', '350,000 SMS per month.')
+        commonPage.getElement(receiveUnbound).should('be.visible').should('be.visible').should('have.text', '350,000 SMS per month.')
     }
     tellnyxCompareCostSMSBasic() {
-        return cy.get('.sc-1a5981e5-14.bAmCql > span > span').should('be.visible').should('have.text', '$2,540')
+        commonPage.getElement(tellnyxCompare).should('be.visible').should('have.text', '$2,540')
     }
     twilioCompareCostSMSBasic() {
-        return cy.get('.sc-1a5981e5-7.fgvOeg > div:nth-child(2) > span').should('be.visible').should('have.text', '$4,763')
+        commonPage.getElement(twilioCompare).should('be.visible').should('have.text', '$4,763')
     }
     tellnyxCompareCostSMS() {
-        return cy.get('.sc-1a5981e5-14.bAmCql > span > span').should('be.visible').should('not.have.text', '$2,540')
+        commonPage.getElement(tellnyxCompare).should('be.visible').should('not.have.text', '$2,540')
     }
     twilioCompareCostSMS() {
-        return cy.get('.sc-1a5981e5-7.fgvOeg > div:nth-child(2) > span').should('be.visible').should('not.have.text', '$4,763')
+        commonPage.getElement(twilioCompare).should('be.visible').should('not.have.text', '$4,763')
     }
     sendMessagesSlider() {
-        return cy.get(':nth-child(4) > div.telnyx-slider > div > div.ant-slider-handle').click({ multiple: true, force: true }).type("{rightarrow}{rightarrow}")
+        commonPage.sliderDrag(makeUnboundCallsSlider)
     }
     receiveMessagesSlider() {
-        return cy.get(':nth-child(5) > div.telnyx-slider > div > div.ant-slider-handle').click({ multiple: true, force: true }).type("{rightarrow}{rightarrow}")
+        commonPage.sliderDrag(receiveInboundCallsSlider)
     }
 
     //Input
     tryForFreeEmail() {
-        return cy.get('div.sc-876fcb71-1.fywsqS > input').type(random+"@gmail.com")
+        commonPage.getElement(tryForFreeEmailInput).type(random+"@gmail.com")
     }
 }
 

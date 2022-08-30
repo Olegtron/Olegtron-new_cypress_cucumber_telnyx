@@ -4,12 +4,13 @@ const random = Math.random().toString(36).substring(4,14)
 import mainPage from '../../pageobjects/mainPage'
 import logInPage from '../../pageobjects/logInPage'
 import passwordResetPage from '../../pageobjects/passwordResetPage'
+import commonPage from "../../pageobjects/commonPage"
 
 Given("I Visit telnyx.com Website main page", () => {
-  cy.visit("https://telnyx.com/");
+  commonPage.openUrl()
 });
 When("When This site uses Cookies Window appears i close it", () => {
-  mainPage.cookieCloseButton()
+  commonPage.cookieCloseButton()
 });
 Then("I click on Log In button", () => {
   mainPage.logInButton()  

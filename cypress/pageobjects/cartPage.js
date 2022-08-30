@@ -1,22 +1,30 @@
+import commonPage from "./commonPage"
+
+const searchForNumbers = 'react-my-cart>div>div>div>button'
+const emptyCart = 'react-my-cart>div>div>section:nth-child(2)>div>button'
+const emptyText = 'react-my-cart>div>div>div:nth-child(1)'
+const checkbox = 'tr:nth-child(2) > td:nth-child(1) > span > svg'
+const credit = 'tr:nth-child(4) > td:nth-child(1) > span'
+
 class cartPage
 {
-    //buttons
+    //Buttons
     searchForNumbersButton(){
-        cy.get('div.tx-Z1azstA > button').click()
+        commonPage.clickElement(searchForNumbers)
     }
     emptyCartButton(){
-        return cy.get('section:nth-child(2) > div.tx-1jfdru > button').should('be.visible')
+        commonPage.clickElement(emptyCart)
     }
 
     //Page Elements
     emptyCartText(){
-        cy.get('div.tx-ZvdLt4 > div.tx-Z1VR9ee').should('be.visible').should('have.text', "Your Cart Is Empty")
+        commonPage.getElement(emptyText).should('be.visible').should('have.text', "Your Cart Is Empty")
     }
     checkMark(){
-        cy.get('tr:nth-child(2) > td:nth-child(1) > span > svg').should('be.visible')
+        commonPage.getElement(checkbox).should('be.visible')
     }
     totalCredit(){
-        cy.get('tr:nth-child(4) > td:nth-child(1) > span').should('be.visible')
+        commonPage.getElement(credit).should('be.visible')
     }
 }
 

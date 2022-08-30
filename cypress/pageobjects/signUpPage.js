@@ -1,11 +1,15 @@
+import commonPage from "./commonPage"
+
+const email = '#email'
+const signUpUrl = 'https://telnyx.com/sign-up'
 
 class signUpPage
 {
     workEmailField() {
-        return cy.get('#email').should('contain.value', "@gmail.com")
+        commonPage.getElement(email).should('contain.value', "@gmail.com")
     }
     checkUrl() {
-        return cy.url().should('eq', 'https://telnyx.com/sign-up')
+        cy.url().should('eq', signUpUrl)
     }
 }
 

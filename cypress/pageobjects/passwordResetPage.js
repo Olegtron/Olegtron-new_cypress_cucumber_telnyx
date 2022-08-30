@@ -1,13 +1,19 @@
+import commonPage from "./commonPage"
+
+const email = '[placeholder="Enter email"]'
+const reset = 'react-login>div>div>form>div>div>button'
+const notification = 'react-login>div>div>div>div>div>span>div>div'
+
 class passwordResetPage
 {
     emailText() {
-        return cy.get('div.PasswordReset__Container-cZiOJo.fvkrSU > form > div > label > div > div > input').type("kusoushimatta@gmail.com")
+        commonPage.getElement(email).type("testemail@gmail.com")
     }
     resetPassButton() {
-        cy.get('div.PasswordReset__Container-cZiOJo.fvkrSU > form > div > div > button').click()
+        commonPage.clickElement(reset)
     }
     notificationText() {
-        return cy.get('div.PasswordReset__MessageContainer-lfSQzT.jxgOqh > div > div > span > div > div').should('be.visible').should('contain', 'We have accepted your password reset request')
+        commonPage.getElement(notification).should('be.visible').should('contain', 'We have accepted your password reset request')
     }
 }
 

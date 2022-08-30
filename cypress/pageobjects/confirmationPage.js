@@ -1,25 +1,27 @@
+import commonPage from "./commonPage"
+
+const firstName = '#FirstName'
+const lastName = '#LastName'
+const email = '#Email'
+const waitlistUrl = 'https://telnyx.com/products/storage-waitlist'
+const confirmText = 'main>div>div>div>h1>span'
+
 class confirmationPage
 {
-    joinButton() {
-        cy.get('div.sc-31a8cefb-10.jnwLUb > div > a').click()
-    }
     firstNameField() {
-        return cy.get('#FirstName')
+        commonPage.getElement(firstName)
     }
     lastNameField() {
-        return cy.get('#LastName')
+        commonPage.getElement(lastName)
     }
     emailField() {
-        return cy.get('#Email')
-    }
-    applyNowButton() {
-        cy.get('#mktoForm_2272 > div.mktoButtonRow > span > button').click()
+        commonPage.getElement(email)
     }
     urlCheck() {
-        cy.url().should('eq', 'https://telnyx.com/products/storage-waitlist')
+        cy.url().should('eq', waitlistUrl)
     }
     confirmationText() {
-        cy.get('div.sc-31a8cefb-9.iDgrXI > h1 > span').should('contain.text', "You're on the waitlist!")
+        commonPage.getElement(confirmText).should('contain.text', "You're on the waitlist!")
     }
 }
 
