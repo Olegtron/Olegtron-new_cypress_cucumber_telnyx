@@ -5,7 +5,7 @@ Tutorial project for learning Cypress with Cucumber
 - Download and install Node.js (https://nodejs.org/en/download/) at least v.14.x
 ### Installing
 - Download or clone my git repository
-- Install all depencies if you don't installed them before
+- Install all depencies **if you don't installed them before (clear project)**
 
 ```
 npm install --save-dev cypress
