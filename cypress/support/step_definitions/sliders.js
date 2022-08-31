@@ -3,11 +3,6 @@ import {  Given, When, Then, And } from "@badeball/cypress-cucumber-preprocessor
 import mainPage from '../../pageobjects/mainPage'
 import commonPage from "../../pageobjects/commonPage"
 
-after(() => {
-    cy.clearCookies()
-    cy.clearLocalStorage()
-  })
-
 //Scenario: sliders and price check for voice tab
 Given("^$I visit telnyx.com website main page", () => {
     cy.visit('/')

@@ -5,11 +5,6 @@ import storagePage from '../../pageobjects/storagePage'
 import confirmationPage from '../../pageobjects/confirmationPage'
 import commonPage from "../../pageobjects/commonPage"
 
-after(() => {
-  cy.clearCookies()
-  cy.clearLocalStorage()
-})
-
 //Scenario: join the whitelist with valid credentials
 Given("^I visit telnyx.com website main page", () => {
   cy.visit('/')

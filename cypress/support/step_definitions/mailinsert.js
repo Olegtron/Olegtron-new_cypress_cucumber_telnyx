@@ -4,11 +4,6 @@ import mainPage from '../../pageobjects/mainPage'
 import signUpPage from '../../pageobjects/signUpPage'
 import commonPage from "../../pageobjects/commonPage"
 
-after(() => {
-  cy.clearCookies()
-  cy.clearLocalStorage()
-})
-
 Given("I visit telnyx.com Website main page", () => {
   cy.visit('/')
 });

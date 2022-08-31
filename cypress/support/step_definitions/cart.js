@@ -7,11 +7,6 @@ import cartPage from '../../pageobjects/cartPage'
 import searchNumbersPage from '../../pageobjects/searchNumbersPage'
 import commonPage from "../../pageobjects/commonPage"
 
-after(() => {
-  cy.clearCookies()
-  cy.clearLocalStorage()
-})
-
 //Scenario: adding product to cart
 Given("I Visit telnyx.com Website Main page$$", () => {
   cy.visit('/')

@@ -18,7 +18,6 @@ module.exports = defineConfig({
 
   e2e: {
     baseUrl: 'https://telnyx.com/',
-    retries: 5,
     specPattern: "**/*.feature",
     supportFile: false,
     setupNodeEvents,
