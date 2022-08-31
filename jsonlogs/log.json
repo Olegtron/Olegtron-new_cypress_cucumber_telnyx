@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "social-links-correct-redirection-check;social-links-correct-redirection-check",
+        "id": "correct-redirection-after-click-on-create-free-trial-account;create-free-trial-account-button-correct-redirection-to-sign-up-page",
         "keyword": "Scenario",
         "line": 2,
-        "name": "social links correct redirection check",
+        "name": "create free trial account button correct redirection to sign-up page",
         "steps": [
           {
             "keyword": "Given ",
             "line": 3,
-            "name": "I Visit telnyx.com Website Main PagE",
+            "name": "I visit telnyx.com Website main pagE",
             "result": {
-              "duration": 2778000000,
+              "duration": 3590000000,
               "status": "passed"
             },
             "match": {
@@ -24,9 +24,9 @@
           {
             "keyword": "When ",
             "line": 4,
-            "name": "When This site uses Cookies Window appears I Close It",
+            "name": "When This site uses Cookies window appears i close It",
             "result": {
-              "duration": 174000000,
+              "duration": 4171000000,
               "status": "passed"
             },
             "match": {
@@ -36,9 +36,21 @@
           {
             "keyword": "Then ",
             "line": 5,
-            "name": "In site footer i click on each social link and each social link should redirect to relevant social network",
+            "name": "I scroll down to Switch + Save with Telnyx section and click Create a free trial account button",
             "result": {
-              "duration": 12672000000,
+              "duration": 6249000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 6,
+            "name": "I should be redirected to sign-up page",
+            "result": {
+              "duration": 19000000,
               "status": "passed"
             },
             "match": {
@@ -49,10 +61,10 @@
         "type": "scenario"
       }
     ],
-    "id": "social-links-correct-redirection-check",
+    "id": "correct-redirection-after-click-on-create-free-trial-account",
     "keyword": "Feature",
     "line": 1,
-    "name": "social links correct redirection check",
-    "uri": "cypress\\e2e\\social.feature"
+    "name": "correct redirection after click on Create Free Trial Account",
+    "uri": "cypress\\e2e\\accRedirection.feature"
   }
 ]

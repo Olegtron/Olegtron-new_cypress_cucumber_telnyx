@@ -3,7 +3,6 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "cypress:config": "npx cypress run --config-file config/config.js",
     "cypress:report": "node cucumber-html-report.js"
   },
   "devDependencies": {
