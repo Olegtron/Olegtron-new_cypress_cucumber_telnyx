@@ -18,15 +18,7 @@ jobs:
             - name: update node manager
               run: npm i npm@latest
             - name: install all dependencies
-              run: npm i
-            - name: Install Cypress
-              run: npm install cypress
-            - name: Install @badeball/cypress-cucumber-preprocessor
-              run: npm install @badeball/cypress-cucumber-preprocessor
-            - name: Install cypress-browserify-preprocessor
-              run: npm install --save-dev @cypress/browserify-preprocessor
-            - name: Install reporter dev
-              run: npm install --save-dev multiple-cucumber-html-reporter
+              run: npm install
             - name: run test
               run: npm run cypress:run
             - name: Generate reports
