@@ -3,6 +3,11 @@ import {  Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import mainPage from '../../pageobjects/mainPage'
 import commonPage from "../../pageobjects/commonPage"
 
+after(() => {
+  cy.clearCookies()
+  cy.clearLocalStorage()
+})
+
 Given("I Visit telnyx.com Website Main PagE", () => {
   cy.visit('/')
 });

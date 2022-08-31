@@ -4,6 +4,11 @@ import mainPage from '../../pageobjects/mainPage'
 import contactUsPage from '../../pageobjects/contactUsPage'
 import commonPage from "../../pageobjects/commonPage"
 
+after(() => {
+  cy.clearCookies()
+  cy.clearLocalStorage()
+})
+
 //Scenario: talk to an expert using valid credentials
 Given("I visit telnyx.com website main page", () => {
   cy.visit('/')

@@ -5,6 +5,11 @@ import logInPage from '../../pageobjects/logInPage'
 import passwordResetPage from '../../pageobjects/passwordResetPage'
 import commonPage from "../../pageobjects/commonPage"
 
+after(() => {
+  cy.clearCookies()
+  cy.clearLocalStorage()
+})
+
 Given("I Visit telnyx.com Website main page", () => {
   cy.visit('/')
 });

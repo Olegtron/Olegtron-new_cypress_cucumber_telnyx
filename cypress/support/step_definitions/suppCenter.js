@@ -4,6 +4,11 @@ import mainPage from '../../pageobjects/mainPage'
 import supportCenterPage from '../../pageobjects/supportCenterPage'
 import commonPage from "../../pageobjects/commonPage"
 
+after(() => {
+  cy.clearCookies()
+  cy.clearLocalStorage()
+})
+
 //Scenario: support center valid search
 Given("I Visit telnyx.com Website Main Page^", () => {
   cy.visit('/')
