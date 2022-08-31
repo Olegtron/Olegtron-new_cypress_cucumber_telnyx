@@ -15,6 +15,10 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   viewportWidth: 1920,
   viewportHeight: 1080,
+  screenshotOnRunFailure:	true,
+  video:true,
+  screenshotsFolder: 'cypress/screenshots',
+  videosFolder: 'cypress/videos',
 
   e2e: {
     baseUrl: 'https://telnyx.com/',
