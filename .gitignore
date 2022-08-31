@@ -1,6 +1,4 @@
 node_modules
-config
 cypress/fixtures
 cypress/plugins
 reports/cucumber-htmlreport
-config
