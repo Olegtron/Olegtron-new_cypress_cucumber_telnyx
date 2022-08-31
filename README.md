@@ -5,25 +5,10 @@ Tutorial project for learning Cypress with Cucumber
 - Download and install Node.js (https://nodejs.org/en/download/) at least v.14.x
 ### Installing
 - Download or clone my git repository
-- Install all depencies **if you don't installed them before (clear project)**
+- Install all depencies from package.json
 
 ```
-npm install --save-dev cypress
-```
-```
-npm install --save-dev @cucumber/cucumber
-```
-```
-npm install --save-dev cucumber-html-reporter
-```
-```
-npm install --save-dev @cypress/browserify-preprocessor
-```
-```
-npm install --save-dev multiple-cucumber-html-reporter 
-```
-```
-npm install --save-dev cypress-cucumber-preprocessor  
+npm install
 ```
 
 **Project opening**
