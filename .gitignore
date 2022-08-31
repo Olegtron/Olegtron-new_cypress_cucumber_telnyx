@@ -2,5 +2,5 @@ node_modules
 config
 cypress/fixtures
 cypress/plugins
-cypress/screenshots
-cypress/videos
+reports/cucumber-htmlreport
+config
